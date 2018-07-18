@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Child;
 
 public class Person {
@@ -11,8 +7,8 @@ public class Person {
 	String address;
 	char gender;
 	String iris;
-	Person mparent;//father
-	Person fparent;//mother
+	Person mparent;
+	Person fparent;
 	public Person(String firstname, char gender, Person fparent, Person mparent) {
 		
 		
@@ -24,7 +20,14 @@ public class Person {
 		this.lastName=fparent.lastName;
                 if(mparent.iris == fparent.iris)
                 {
+                   if(gender == 'M'){
                 iris = "Brown";
+                }
+                   else if(gender=='F')
+                   {
+                       iris= "Not defined";
+                 
+                   }
                 
                 }
                 else if (mparent.iris !=fparent.iris)
@@ -39,7 +42,7 @@ public class Person {
 		
 	}
 	public Person(String firstname, String lastName, String address, char gender, String iris) {
-		super();
+		
 		this.firstname = firstname;
 		this.lastName = lastName;
 		this.address = address;
